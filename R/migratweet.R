@@ -31,8 +31,6 @@ migratweet <- function(user = NULL,
 
   user <- user
 
-  instances <- mastodon_instances
-
   if(is.null(academicAPI)){
     academicAPI <- academictwitteR::get_bearer()
   }
