@@ -14,7 +14,7 @@ library("devtools")
 devtools::install_github("https://github.com/nicolarighetti/mastodonR")
 ```
 
-# Migratweet
+## Migratweet
 
 You can scrape the users you follow and/or who follow you.
 The option *academicAPI* allows you to specify your Bearer Token. Otherwise, it is retrieved using the *get_bearer* function of [academictwitteR](https://github.com/cjbarrie/academictwitteR). 

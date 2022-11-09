@@ -1,4 +1,4 @@
-Package: MastodonR
+Package: mastodonR
 Type: Package
 Title: R package for Mastodon
 Version: 0.1.0
