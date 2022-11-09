@@ -1,29 +1,27 @@
-## migratweet
-##
-## Function to collect Mastodon accounts put in the "name" field on Twitter.
-##
-## @param user the username on Twitter
-## @param followers collect Mastodon accounts from followers. Default to TRUE
-## @param following collect Mastodon accounts from following Default to TRUE
-## @param academicAPI the Academic Twitter API bearer token. If not specified, retrieved from the from the environmental variable "TWITTER_BEARER" using \link[academictwitteR]{get_bearer}.
-##
-## @return a vector of detected Mastodon accounts and a csv file saved in the working directory that can be imported on Mastodon to add the listed accounts.
-##
-## @details
-## Simple function to extract Mastodon accounts from the name field on Twitter using a simple series of regex routines.
-##
-## @examples
-## \dontrun{
-## account_list <- migratweet(user = "NicRighetti")
-## head(account_list)
-## }
-##
-## @importFrom academictwitteR get_user_id get_bearer get_user_followers get_user_following
-## @importFrom utils write.table
-##
-## @export
-
-utils::globalVariables(c("instances", "write.table"))
+#' migratweet
+#'
+#' Function to collect Mastodon accounts put in the "name" field on Twitter.
+#'
+#' @param user the username on Twitter
+#' @param followers collect Mastodon accounts from followers. Default to TRUE
+#' @param following collect Mastodon accounts from following Default to TRUE
+#' @param academicAPI the Academic Twitter API bearer token. If not specified, retrieved from the from the environmental variable "TWITTER_BEARER" using \link[academictwitteR]{get_bearer}.
+#'
+#' @return a vector of detected Mastodon accounts and a csv file saved in the working directory that can be imported on Mastodon to add the listed accounts.
+#'
+#' @details
+#' Simple function to extract Mastodon accounts from the name field on Twitter using a simple series of regex routines.
+#'
+#' @examples
+#' \dontrun{
+#' account_list <- migratweet(user = "NicRighetti")
+#' head(account_list)
+#' }
+#'
+#' @importFrom academictwitteR get_user_id get_bearer get_user_followers get_user_following
+#' @importFrom utils write.table
+#'
+#' @export
 
 
 migratweet <- function(user = NULL,
