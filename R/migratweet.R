@@ -33,12 +33,12 @@ migratweet <- function(user = NULL,
 
   instances <- mastodon_instances
 
-  user_id <- academictwitteR::get_user_id(usernames = user,
-                                          bearer_token = academicAPI)
-
   if(is.null(academicAPI)){
     academicAPI <- academictwitteR::get_bearer()
   }
+
+  user_id <- academictwitteR::get_user_id(usernames = user,
+                                          bearer_token = academicAPI)
 
   if (isTRUE(followers)){
     follower_list <- academictwitteR::get_user_followers(x = user_id,
