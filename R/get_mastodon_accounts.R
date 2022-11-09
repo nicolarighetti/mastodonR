@@ -3,7 +3,7 @@
 #' Function to get Mastodon accounts from the "name" field on Twitter.
 #'
 #' @param followers_following the followers and/or following list of users
-
+#' @noRd
 get_mastodon_accounts <- function(followers_following) {
   account_list <- followers_following[grepl("@", followers_following[, "name"]),]
   account_list <- unlist(strsplit(account_list$name, " "))
